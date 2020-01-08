@@ -44,7 +44,9 @@ $("#addNewColor").click(function(){
   $newColor.click();
 
 });
-  
+  $("#eraser").click(function(){
+  color = "white";
+})
   
 
 //On mouse events on the canvas
@@ -57,7 +59,13 @@ $canvas.mousedown (function(e){
     context.beginPath();
     context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
     context.lineTo(e.offsetX, e.offsetY);
-    context.strokeStyle = color;
+    context.strokeStyle = color;
+
+    if(color == "white") {
+      context.lineWidth = 10;  
+    } else {
+      context.lineWidth = 1;
+    }
     context.stroke();
     lastEvent = e;
    }   

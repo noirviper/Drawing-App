@@ -75,7 +75,8 @@ button {
   margin: 0 auto;
 }
 #revealColorSelect,
-#clearCanvas {
+#clearCanvas,
+#eraser {
 	border: none;
 	border-radius: 5px;
 	margin: 10px auto;
